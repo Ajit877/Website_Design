@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!-- Created By AsTachnology - astachnology.com -->
+<html>
+
+<head>
+    <meta charset="utf-8">
+  <title>txt blink</title>
+  <style>
+    body {
+      background: blueviolet;
+    }
+
+    .text-animation {
+      position: absolute;
+      top: 10%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .text-animation h1 {
+      color: transparent;
+      font-family: "Montserrat", sans-serif;
+      font-size: 35px;
+    }
+
+    .text-animation h1 span {
+      animation: glow 2.5s ease-in-out infinite;
+    }
+
+    @keyframes glow {
+
+      0%,
+      100% {
+        color: #eee;
+        text-shadow: 0 0 10px #00acee, 0 0 50px #00acee, 0 0 80px #00acee;
+      }
+
+      10%,
+      90% {
+        color: #111;
+        text-shadow: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="text-animation">
+    <h1>AsTachnology</h1>
+  </div>
+</body>
+
+<script>
+  document.querySelector(".text-animation h1").innerHTML = document.querySelector(".text-animation h1").textContent.replace(/./g, '<span>$&</span>');
+
+  let spans = document.querySelectorAll(".text-animation h1 span");
+  for (let i = 0; i < spans.length; i++) {
+    spans[i].style.animationDelay = (i * 250) + "ms";
+  }
+</script>
+
+</html>

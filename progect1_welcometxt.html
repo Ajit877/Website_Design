@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!-- Created By AsTachnology - astachnology.com -->
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Auto Write</title>
+  <style>
+    body {
+      margin: 0px;
+      display: flex;
+      align-items: center;
+      background: blueviolet;
+      position: absolute;
+      top: 10%;
+    }
+
+    .text-typing {
+      padding: 10px 20px;
+      background: #fff;
+      font-size: 21px;
+      font-family: monospace;
+      border-radius: 20px;
+    }
+
+    .text-typing p {
+      margin: 0px;
+      white-space: nowrap;
+      overflow: hidden;
+      animation: typing 4s steps(22, end) forwards,
+        blink 1s infinite;
+    }
+
+    @keyframes typing {
+      0% {
+        width: 0%
+      }
+
+      100% {
+        width: 100%
+      }
+    }
+
+    @keyframes blink {
+
+      100%,
+      10% {
+        border-right: 2px solid transparent;
+      }
+
+      50% {
+        border-right: 2px solid #222;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="text-typing">
+    <p>Welcome to AsTachnology&nbsp;</p>
+  </div>
+</body>
+
+</html>

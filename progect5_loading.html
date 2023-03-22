@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!-- Created By AsTachnology - astachnology.com -->
+<html>
+
+<head>
+  <meta charset="utf-8">
+    <title>Loading Animation</title>
+  <style>
+  
+    .center {
+      display: flex;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 20%;
+      left: 40%;
+    }
+
+    .ring {
+      position: absolute;
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      animation: ring 2s linear infinite;
+    }
+
+    @keyframes ring {
+      0% {
+        transform: rotate(0deg);
+        box-shadow: 1px 8px 5px #e65c00;
+      }
+
+      50% {
+        transform: rotate(180deg);
+        box-shadow: 1px 5px 2px #18b201;
+      }
+
+      100% {
+        transform: rotate(360deg);
+        box-shadow: 2px 5px 2px #0456c8;
+      }
+    }
+
+    @keyframes text {
+      50% {
+        color: black;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="center">
+    <div class="ring"></div>
+    <span>loading...</span>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<!-- Created By AsTachnology - astachnology.com -->
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>sign up</title>
+
+  <style>
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      background: blueviolet;
+    }
+
+    .background {
+      background-color: transparent;
+    }
+
+    .box {
+      width: 330px;
+      text-align: center;
+      border-radius: 5px;
+      padding: 50px 35px 10px 35px;
+    }
+
+    .box header {
+      font-size: 35px;
+      font-weight: 600;
+      margin: 0 0 30px 0;
+    }
+
+    .box .form-outer {
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .box .form-outer form {
+      display: flex;
+      width: 400%;
+    }
+
+    .form-outer form .page {
+      width: 25%;
+      transition: margin-left 0.3s ease-in-out;
+    }
+
+    .form-outer form .page .title {
+      text-align: left;
+      font-size: 25px;
+      font-weight: 500;
+    }
+
+    .form-outer form .page .set {
+      width: 330px;
+      height: 45px;
+      margin: 45px 0;
+      display: flex;
+      position: relative;
+    }
+
+    form .page .set .tag {
+      position: absolute;
+      top: -30px;
+      font-weight: 500;
+    }
+
+    form .page .set input {
+      height: 100%;
+      width: 100%;
+      border: 1px solid lightgrey;
+      border-radius: 5px;
+      padding-left: 15px;
+      font-size: 18px;
+    }
+
+    form .page .set select {
+      width: 100%;
+      padding-left: 10px;
+      font-size: 17px;
+      font-weight: 500;
+    }
+
+    form .page .set button {
+      width: 100%;
+      height: calc(100% + 5px);
+      border: none;
+      background: blueviolet;
+      margin-top: -20px;
+      border-radius: 5px;
+      color: #fff;
+      font-size: 18px;
+      font-weight: 500;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      transition: 0.5s ease;
+    }
+
+    form .page .set button:hover {
+      background: #000;
+    }
+
+    form .page .btns button {
+      margin-top: -20px !important;
+    }
+
+    form .page .btns button.prev {
+      margin-right: 3px;
+      font-size: 17px;
+    }
+
+    form .page .btns button.next {
+      margin-left: 3px;
+    }
+
+    .box .process {
+      display: flex;
+      margin: 40px 0;
+      user-select: none;
+    }
+
+    .box .process .step {
+      text-align: center;
+      width: 100%;
+      Box position: relative;
+    }
+
+    .box .box-bar .step p {
+      font-weight: 500;
+      font-size: 18px;
+      color: #000;
+      margin-bottom: 8px;
+    }
+
+    .process .step .flow {
+      height: 25px;
+      width: 25px;
+      border: 2px solid #000;
+      display: inline-block;
+      border-radius: 50%;
+      position: relative;
+      transition: 0.2s;
+      font-weight: 500;
+      font-size: 17px;
+      line-height: 25px;
+    }
+
+    .process .step .flow.active {
+      border-color: blueviolet;
+      background: blueviolet;
+    }
+
+    div {
+      background: #fff;
+    }
+
+    .process .step .flow span {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .process .step .flow.active span {
+      display: none;
+    }
+
+    .process .step .flow:before,
+    .process .step .flow:after {
+      position: absolute;
+      content: '';
+      bottom: 11px;
+      right: -51px;
+      height: 3px;
+      width: 44px;
+      background: #000;
+    }
+
+    .process .step .flow.active:after {
+      background: blueviolet;
+      transform: scaleX(0);
+      transform-origin: left;
+      animation: animate 0.3s linear forwards;
+    }
+
+    @keyframes animate {
+      100% {
+        transform: scaleX(1);
+      }
+    }
+
+    .process .step:last-child .flow:before,
+    .process .step:last-child .flow:after {
+      display: none;
+    }
+
+    .process .step p.active {
+      color: blueviolet;
+      transition: 0.2s linear;
+    }
+
+    .process .step .check {
+      position: absolute;
+      left: 50%;
+      top: 70%;
+      font-size: 15px;
+      transform: translate(-50%, -50%);
+      display: none;
+    }
+
+    .process .step .check.active {
+      display: block;
+      color: #fff;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    <header>Signup Form</header>
+    <div class="process">
+      <div class="step">
+        <p>
+          Name
+        </p>
+        <div class="flow">
+          <span>1</span>
+        </div>
+        <div class="check fas fa-check"></div>
+      </div>
+      <div class="step">
+        <p>
+          Contact
+        </p>
+        <div class="flow">
+          <span>2</span>
+        </div>
+        <div class="check fas fa-check"></div>
+      </div>
+      <div class="step">
+        <p>
+          Birth
+        </p>
+        <div class="flow">
+          <span>3</span>
+        </div>
+        <div class="check fas fa-check"></div>
+      </div>
+      <div class="step">
+        <p>
+          Submit
+        </p>
+        <div class="flow">
+          <span>4</span>
+        </div>
+        <div class="check fas fa-check"></div>
+      </div>
+    </div>
+    <div class="form-outer">
+      <form action="#">
+        <div class="page slide-page">
+          <div class="title">
+            Basic Info:
+          </div>
+          <div class="set">
+            <div class="tag">
+              First Name
+            </div>
+            <input type="text" class="background">
+          </div>
+          <div class="set">
+            <div class="tag">
+              Last Name
+            </div>
+            <input type="text" class="background">
+          </div>
+          <div class="set">
+            <button class="firstNext next">Next</button>
+          </div>
+        </div>
+        <div class="page">
+          <div class="title">
+            Contact Info:
+          </div>
+          <div class="set">
+            <div class="tag">
+              Email Address
+            </div>
+            <input type="text" class="background">
+          </div>
+          <div class="set">
+            <div class="tag">
+              Phone Number
+            </div>
+            <input type="Number" class="background">
+          </div>
+          <div class="set btns">
+            <button class="prev-1 prev">Previous</button>
+            <button class="next-1 next">Next</button>
+          </div>
+        </div>
+        <div class="page">
+          <div class="title">
+            Date of Birth:
+          </div>
+          <div class="set">
+            <div class="tag">
+              Date
+            </div>
+            <input type="text" class="background">
+          </div>
+          <div class="set">
+            <div class="tag">
+              Gender
+            </div>
+            <select style="background-color: transparent;">
+              <option>Male</option>
+              <option>Female</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="set btns">
+            <button class="prev-2 prev">Previous</button>
+            <button class="next-2 next">Next</button>
+          </div>
+        </div>
+        <div class="page">
+          <div class="title">
+            Login Details:
+          </div>
+          <div class="set">
+            <div class="tag">
+              Username
+            </div>
+            <input type="text" class="background">
+          </div>
+          <div class="set">
+            <div class="tag">
+              Password
+            </div>
+            <input type="password" class="background">
+          </div>
+          <div class="set btns">
+            <button class="prev-3 prev">Previous</button>
+            <button class="submit">Submit</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <script>
+    const slidePage = document.querySelector(".slide-page");
+    const nextBtnFirst = document.querySelector(".firstNext");
+    const prevBtnSec = document.querySelector(".prev-1");
+    const nextBtnSec = document.querySelector(".next-1");
+    const prevBtnThird = document.querySelector(".prev-2");
+    const nextBtnThird = document.querySelector(".next-2");
+    const prevBtnFourth = document.querySelector(".prev-3");
+    const submitBtn = document.querySelector(".submit");
+    const processText = document.querySelectorAll(".step p");
+    const processCheck = document.querySelectorAll(".step .check");
+    const flow = document.querySelectorAll(".step .flow");
+    let current = 1;
+
+    nextBtnFirst.addEventListener("click", function(event) {
+      event.preventDefault();
+      slidePage.style.marginLeft = "-25%";
+      flow[current - 1].classList.add("active");
+      processCheck[current - 1].classList.add("active");
+      processText[current - 1].classList.add("active");
+      current += 1;
+    });
+    nextBtnSec.addEventListener("click", function(event) {
+      event.preventDefault();
+      slidePage.style.marginLeft = "-50%";
+      flow[current - 1].classList.add("active");
+      processCheck[current - 1].classList.add("active");
+      processText[current - 1].classList.add("active");
+      current += 1;
+    });
+    nextBtnThird.addEventListener("click", function(event) {
+      event.preventDefault();
+      slidePage.style.marginLeft = "-75%";
+      flow[current - 1].classList.add("active");
+      processCheck[current - 1].classList.add("active");
+      processText[current - 1].classList.add("active");
+      current += 1;
+    });
+    submitBtn.addEventListener("click", function() {
+      flow[current - 1].classList.add("active");
+      processCheck[current - 1].classList.add("active");
+      processText[current - 1].classList.add("active");
+      current += 1;
+      setTimeout(function() {
+        alert("Your Form Successfully Signed up");
+        location.reload();
+      }, 800);
+    });
+
+    prevBtnSec.addEventListener("click", function(event) {
+      event.preventDefault();
+      slidePage.style.marginLeft = "0%";
+      flow[current - 2].classList.remove("active");
+      processCheck[current - 2].classList.remove("active");
+      processText[current - 2].classList.remove("active");
+      current -= 1;
+    });
+    prevBtnThird.addEventListener("click", function(event) {
+      event.preventDefault();
+      slidePage.style.marginLeft = "-25%";
+      flow[current - 2].classList.remove("active");
+      processCheck[current - 2].classList.remove("active");
+      processText[current - 2].classList.remove("active");
+      current -= 1;
+    });
+    prevBtnFourth.addEventListener("click", function(event) {
+      event.preventDefault();
+      slidePage.style.marginLeft = "-50%";
+      flow[current - 2].classList.remove("active");
+      processCheck[current - 2].classList.remove("active");
+      processText[current - 2].classList.remove("active");
+      current -= 1;
+    });
+  </script>
+</body>
+
+</html>

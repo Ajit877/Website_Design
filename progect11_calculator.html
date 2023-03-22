@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<!-- Created By AsTachnology - astachnology.com -->
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Calculator</title>
+  <style>
+    body {
+      width: 100%;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: blueviolet;
+    }
+    
+    .flow {
+      position: absolute;
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 70px;
+      width: 100%;
+      justify-content: space-around;
+    }
+    
+    .container {
+      width: 360px;
+      padding: 20px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.1);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+      border-top: 1px solid rgba(255, 255, 255, 0.5);
+      border-left: 1px solid rgba(255, 255, 255, 0.5);
+    }
+    
+    .container input[type="text"] {
+      width: 90%;
+      height: 100px;
+      margin: 0 3px;
+      outline: none;
+      border: none;
+      color: #fff;
+      font-size: 20px;
+      text-align: right;
+      padding-right: 10px;
+      pointer-events: none;
+      background: transparent;
+    }
+    
+    .container input[type="button"] {
+      height: 65px;
+      color: #fff;
+      width: calc(100% / 4 - 5px);
+      background: transparent;
+      border-radius: 12px;
+      margin-top: 15px;
+      outline: none;
+      border: none;
+      font-size: 20px;
+      transition: all 0.0s ease;
+    }
+    
+    .container input[type="button"]:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="background">
+    <div class="flow">
+      <span class="one"></span>
+      <span class="two"></span>
+      <span class="three"></span>
+      <span class="four"></span>
+      <span class="five"></span>
+      <span class="six"></span>
+      <span class="seven"></span>
+      <span class="seven"></span>
+    </div>
+    <div class="flow">
+      <span class="one"></span>
+      <span class="two"></span>
+      <span class="three"></span>
+      <span class="four"></span>
+      <span class="five"></span>
+      <span class="six"></span>
+      <span class="seven"></span>
+      <span class="seven"></span>
+    </div>
+    <div class="flow">
+      <span class="one"></span>
+      <span class="two"></span>
+      <span class="three"></span>
+      <span class="four"></span>
+      <span class="five"></span>
+      <span class="six"></span>
+      <span class="seven"></span>
+      <span class="seven"></span>
+    </div>
+    <div class="flow">
+      <span class="one"></span>
+      <span class="two"></span>
+      <span class="three"></span>
+      <span class="four"></span>
+      <span class="five"></span>
+      <span class="six"></span>
+      <span class="seven"></span>
+      <span class="seven"></span>
+    </div>
+    <div class="container">
+      <form action="#" name="forms">
+        <input type="text" name="answer">
+        <div class="buttons">
+          <input type="button" value="AC" onclick="forms.answer.value = ''">
+          <input type="button" value="DEL" onclick="forms.answer.value = forms.answer.value.substr(0 , forms.answer.value.length -1)">
+          <input type="button" value="%" onclick="forms.answer.value += '%'">
+          <input type="button" value="/" onclick="forms.answer.value += '/'">
+        </div>
+        <div class="buttons">
+          <input type="button" value="7" onclick="forms.answer.value += '7'">
+          <input type="button" value="8" onclick="forms.answer.value += '8'">
+          <input type="button" value="9" onclick="forms.answer.value += '9'">
+          <input type="button" value="*" onclick="forms.answer.value += '*'">
+        </div>
+        <div class="buttons">
+          <input type="button" value="4" onclick="forms.answer.value += '4'">
+          <input type="button" value="5" onclick="forms.answer.value += '5'">
+          <input type="button" value="6" onclick="forms.answer.value += '6'">
+          <input type="button" value="-" onclick="forms.answer.value += '-'">
+        </div>
+        <div class="buttons">
+          <input type="button" value="1" onclick="forms.answer.value += '1'">
+          <input type="button" value="2" onclick="forms.answer.value += '2'">
+          <input type="button" value="3" onclick="forms.answer.value += '3'">
+          <input type="button" value="+" onclick="forms.answer.value += '+'">
+        </div>
+        <div class="buttons">
+          <input type="button" value="0" onclick="forms.answer.value += '0'">
+          <input type="button" value="00" onclick="forms.answer.value += '00'">
+          <input type="button" value="." onclick="forms.answer.value += '.'">
+          <input type="button" value="=" onclick="forms.answer.value = eval(forms.answer.value)">
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>
